@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="dayContainer container">
@@ -13,7 +14,7 @@
         <span>{icon}</span>
       </div>
       <div class="weatherContainer">
-        <span>{icon}</span>
+        <img src="./weather-icons/Cloudy.svg" alt="cloud and sun">
         <h1>32°</h1>
         <h2>Monterey</h2>
       </div>
@@ -40,8 +41,8 @@
         <span>{icon}</span>
       </div>
       <div class="weatherContainer">
-        <span>{icon}</span>
-        <h1>32°</h1>
+        <img src="./weather-icons/Moon.svg" alt="moon">
+        <h1 id="temperatura">32°</h1>
         <h2>Monterey</h2>
       </div>
       <div class="bottomLabel">
@@ -59,5 +60,6 @@
         </div>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
