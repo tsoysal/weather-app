@@ -24,6 +24,52 @@ img {
     position: relative;
 }
 
+#expand {
+    opacity: 0.2;
+    display: none;
+}
+
+.minimal {
+    height: 150px;
+    display: relative;
+}
+
+.minimal::before {
+    display: none;
+}
+
+.minimal svg {
+    display: none;
+}
+
+.minimal img {
+    width: 100px;
+    position: absolute;
+    top:10px;
+    right: 20px;
+}
+
+.minimal .weatherContainer {
+    position: static;
+}
+
+.minimal h2 {
+    display: none;
+}
+
+.minimal .weatherContainer .temp {
+    font-size: 60px;
+    opacity: 0.7;
+}
+
+.minimal .bottomLabel {
+    display: none;
+}
+
+.minimal #expand {
+    display: block;
+}
+
 .dayContainer {
     background-color: #3b8de6;
 }

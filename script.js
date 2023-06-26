@@ -11,12 +11,10 @@ function success(position) {
         const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=3a98a1009a63448aa50164401232606&q=${currLatitude},${currLongitude}&aqi=no`);
         const data = await response.json();
         if(data.current.is_day){
-            night.classList.remove("active");
-            day.classList.add("active");
+            day.classList.remove("minimal");
         }
         else {
-            day.classList.remove("active");
-            night.classList.add("active");
+            night.classList.remove("minimal")
         }
         currLocation.forEach(element => element.innerText = data.location.name)
         temp.forEach(element => element.innerText = data.current.temp_c);
@@ -33,3 +31,13 @@ const error = (err) => {
     console.log(err);
 }
 navigator.geolocation.getCurrentPosition(success, error);
+
+day.addEventListener("click", () => {
+    day.classList.remove("minimal")
+    night.classList.add("minimal")
+})
+
+night.addEventListener("click", () => {
+    night.classList.remove("minimal")
+    day.classList.add("minimal")
+})
