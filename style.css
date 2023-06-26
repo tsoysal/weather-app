@@ -22,6 +22,7 @@ img {
     text-align: center;
     color: white;   
     position: relative;
+    transition: all 1s ease;
 }
 
 #expand {
