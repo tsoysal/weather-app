@@ -166,3 +166,21 @@ svg {
 .box span:last-child {
     display: inline;
 }
+
+@media screen and (min-width:1000px){
+    .topLabel, .weatherContainer, .bottomLabel {
+        width: 30%;
+        margin-inline: auto;
+    }
+    .weatherContainer img {
+        width: 200px;
+    }
+    .minimal img {
+        width: 100px;
+    }
+
+    .weatherContainer .temp::after {
+        right: 130px;
+    }
+
+}
