@@ -3,7 +3,6 @@ const currLocation = document.querySelectorAll(".location");
 const others = document.querySelectorAll(".others");
 const day = document.querySelector(".dayContainer");
 const night = document.querySelector(".nightContainer")
-const weatherImg = document.querySelector("#weatherImg");
 
 function success(position) {
     const currLatitude = position.coords.latitude;
@@ -25,19 +24,6 @@ function success(position) {
         others[3].innerHTML = others[0].innerHTML;
         others[4].innerHTML = others[1].innerHTML;
         others[5].innerHTML = others[2].innerHTML;
-        let srcImg;
-        switch(data.current.condition.code){
-            case 1000:
-                srcImg = "/weather-icons/Sunny.svg"
-                break;
-            case 1003:
-                srcImg = "/weather-icons/PartlyCloudy.svg"
-                break;
-            default:
-                srcImg = "/weather-icons/Rainy.svg"
-                break;
-        }
-        weatherImg.src = srcImg;
     }
     getWeather();
 }
